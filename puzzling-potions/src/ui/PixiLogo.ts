@@ -9,6 +9,6 @@ export class PixiLogo extends Container {
         super();
         this.image = Sprite.from('logo-pixi');
         this.image.anchor.set(0.5);
-        this.addChild(this.image);
+        // this.addChild(this.image);
     }
 }
