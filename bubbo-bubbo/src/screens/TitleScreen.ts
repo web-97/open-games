@@ -164,8 +164,8 @@ export class TitleScreen extends Container implements AppScreen
         this._title.view.x = w * 0.5;
         this._title.view.y = 145;
 
-        this._pixiLogo.view.x = 55;
-        this._pixiLogo.view.y = h - 40;
+        this._pixiLogo.view.x = w / 2;
+        this._pixiLogo.view.y = h - 30;
 
         this._footer.width = w * 1.2;
         this._footer.x = w * 0.5;
@@ -250,7 +250,7 @@ export class TitleScreen extends Container implements AppScreen
         this._bottomAnimContainer.addChild(this._cannon.view);
 
         this._pixiLogo = new PixiLogo();
-        this._pixiLogo.view.scale.set(0.35);
+        this._pixiLogo.view.scale.set(0.5);
         this._bottomAnimContainer.addChild(this._pixiLogo.view);
 
         this._portholeOne = new Porthole();

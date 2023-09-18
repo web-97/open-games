@@ -14,11 +14,11 @@ export class PixiLogo
     constructor(header?: string)
     {
         // Create the logo sprite from an image
-        const logo = Sprite.from('pixi-logo');
+        const logo = Sprite.from('game-logo');
 
         logo.anchor.set(0.5);
-        // this.view.addChild(logo);
 
+        this.view.addChild(logo);
         // If the header parameter is present, add the header text above the logo
         if (header)
         {
