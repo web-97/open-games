@@ -32,7 +32,7 @@ export class TitleScreen extends Container implements AppScreen
     private readonly _hitArea: Rectangle;
     /** A background visual element */
     private readonly _background: TilingSprite;
-    
+
     private _title!: Title;
     private _pixiLogo!: PixiLogo;
     private _cannon!: Cannon;
@@ -62,7 +62,7 @@ export class TitleScreen extends Container implements AppScreen
         this._background.tileScale.set(designConfig.backgroundTileScale);
         this._background.interactive = true;
         this.addChild(this._background);
-        
+
         // Create the hit area
         this._hitArea = new Rectangle();
 
@@ -106,7 +106,7 @@ export class TitleScreen extends Container implements AppScreen
 
         // Reset screen data
         this.alpha = 0;
-        
+
         // Starts the animations for the background porthole details
         this._portholeOne.start();
         this._portholeTwo.start();
@@ -124,7 +124,7 @@ export class TitleScreen extends Container implements AppScreen
             duration: 0.75,
             ease: 'elastic.out(1, 0.5)',
         };
-        
+
         // Tween the containers back to their original position
         gsap.to(this._topAnimContainer, endData);
         gsap.to(this._midAnimContainer, endData);
@@ -186,10 +186,10 @@ export class TitleScreen extends Container implements AppScreen
             this._cannon.view.height / 2 -
             this._playBtn.height / 2 +
             10;
-            
+
         this._portholeOne.view.x = 40;
         this._portholeOne.view.y = 40;
-    
+
         this._portholeTwo.view.x = w - 40;
         this._portholeTwo.view.y = this._title.view.y + this._title.view.height + 10;
 
@@ -291,7 +291,7 @@ export class TitleScreen extends Container implements AppScreen
             window.open(designConfig.forkMeURL, '_blank')?.focus();
         });
 
-        this._bottomAnimContainer.addChild(this._forkBtn);
+        // this._bottomAnimContainer.addChild(this._forkBtn);
 
         this._audioBtn = new AudioButton();
         this._topAnimContainer.addChild(this._audioBtn);

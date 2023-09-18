@@ -17,7 +17,7 @@ export class PixiLogo
         const logo = Sprite.from('pixi-logo');
 
         logo.anchor.set(0.5);
-        this.view.addChild(logo);
+        // this.view.addChild(logo);
 
         // If the header parameter is present, add the header text above the logo
         if (header)
