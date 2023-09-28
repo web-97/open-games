@@ -28,7 +28,7 @@ function resize() {
     const scaleX = windowWidth < minWidth ? minWidth / windowWidth : 1;
     const scaleY = windowHeight < minHeight ? minHeight / windowHeight : 1;
     const scale = scaleX > scaleY ? scaleX : scaleY;
-    const width = windowWidth * scale;
+    const width = windowWidth * scale * (windowWidth < windowHeight ? 1 : 0.8);
     const height = windowHeight * scale;
 
     // Update canvas style dimensions and scroll window up to avoid issues on mobile resize
