@@ -26,7 +26,8 @@ export class ImageButton extends FancyButton {
 
         super({
             defaultView,
-            anchor: 0.5,
+            anchorY: 0.5,
+            anchorX: 0
         });
 
         this.image = defaultView;

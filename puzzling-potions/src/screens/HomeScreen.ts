@@ -69,13 +69,13 @@ export class HomeScreen extends Container {
         this.settingsButton.onPress.connect(() => navigation.presentPopup(SettingsPopup));
         this.addChild(this.settingsButton);
 
-        this.githubButton = new SmallButton({ text: i18n.githubButton });
+        this.githubButton = new SmallButton({ text: '成都海柚科技有限公司' });
         this.githubButton.onPress.connect(() => window.open(i18n.urlGithub, 'blank'));
         // this.addChild(this.githubButton);
 
-        this.pixiButton = new ImageButton({ image: 'logo-pixi', scaleOverride: 0.75 });
-        this.pixiButton.onPress.connect(() => window.open(i18n.urlPixi, 'blank'));
-        // this.addChild(this.pixiButton);
+        this.pixiButton = new ImageButton({ image: 'logo-pixi', scaleOverride: 1 });
+        // this.pixiButton.onPress.connect(() => window.open(i18n.urlPixi, 'blank'));
+        this.addChild(this.pixiButton);
 
         this.playButton = new LargeButton({ text: i18n.playButton });
         this.playButton.onPress.connect(() => navigation.showScreen(GameScreen));
